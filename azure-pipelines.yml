@@ -54,9 +54,9 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
   condition: succeeded()
-  
+
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: 'Azure subscription 1'
+    azureSubscription: 'GitHub connection 1'
     appName: 'escalator-functions-free'
     package: $(System.DefaultWorkingDirectory)/**/*.zip
